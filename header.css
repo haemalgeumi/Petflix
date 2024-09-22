@@ -1,0 +1,86 @@
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 3px #000;
+  z-index: 20;
+}
+.header__wrapper {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px 0 16px;
+}
+.header__start {
+  height: 40px;
+  line-height: 40px;
+}
+.header__hamberger {
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+.header__title {
+  font-size: 1.2rem;
+  margin-left: 6px;
+}
+/* 검색창이 헤더의 넓이를 따라가도록 */
+.header__center {
+  width: 50%;
+}
+.header__form {
+  display: flex;
+  max-width: 100%;
+}
+/* 인풋을 버튼크기 빼고 다 차지하도록 */
+.header__input--text {
+  width: calc(100% - 60px);
+  height: 40px;
+  padding: 0 6px;
+  border: 1px solid #8f8f8f;
+  border-right: none;
+  border-radius: 2px 0 0 2px;
+}
+
+.header__input--button {
+  width: 60px;
+  height: 42px;
+  border: 1px solid #8f8f8f;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+}
+.header__end {
+  display: flex;
+}
+.header__search {
+  display: none;
+  margin-right: 5px;
+  border: none;
+  background-color: transparent;
+  font-size: 1.5rem;
+}
+.header__profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #eaeaea;
+  background-color: salmon;
+}
+
+@media screen and (max-width: 800px) {
+  .header__title {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .header__search {
+    display: block;
+  }
+  .header__center {
+    display: none;
+  }
+}
