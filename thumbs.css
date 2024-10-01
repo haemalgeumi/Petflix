@@ -10,7 +10,7 @@
   margin: 0 0 15px 0;
   padding: 0 10px;
 }
-.thumbs__thumbnail {
+#player {
   width: 100%;
   max-width: 100%; /* 자기속한 영역에서 벗어날 수 없음*/
 }
