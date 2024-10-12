@@ -24,3 +24,4 @@ export async function getVideoData() {
     return []; // 오류가 발생하면 빈 배열 반환
   }
 }
+

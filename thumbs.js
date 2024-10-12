@@ -47,11 +47,12 @@ export function thumbs(){
   createVideoItem();
 }
 
-
+// const video = await getVideoData();
 document.addEventListener("DOMContentLoaded", async function() {
   try {
     const video = await getVideoData(); // 비동기 함수의 결과를 기다림
     YoutubeApi(video); // 받아온 비디오 데이터를 YoutubeApi 함수에 전달
+ 
     
   } catch (error) {
     console.error("비디오 데이터를 받아오는 중 오류 발생:", error);

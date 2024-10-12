@@ -1,12 +1,30 @@
+:root {
+  --main-bg-color: #fff;
+  --mani-text-color: #000;
+}
+body.dark-mode {
+  --main-bg-color: #333; /* 다크 모드 배경색 */
+  --main-text-color: #fff; /* 다크 모드 텍스트 색상 */
+}
 header {
   width: 100%;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: #fff;
+  /* background-color: #fff; */
+  background-color: var(--main-bg-color);
   box-shadow: 0 0 3px #000;
   z-index: 20;
 }
+body.dark-mode header,
+body.dark-mode header .header__input--text,
+body.dark-mode header .header__input--button,
+body.dark-mode header .header__profile--btn,
+body.dark-mode header .header__mode {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
 .header__wrapper {
   height: 60px;
   display: flex;
@@ -62,6 +80,10 @@ header {
   background-color: transparent;
   font-size: 1.5rem;
 }
+.header__dropdown {
+  height: 100%;
+  position: relative;
+}
 .header__profile {
   width: 40px;
   height: 40px;
@@ -69,7 +91,39 @@ header {
   border: 1px solid #eaeaea;
   background-color: salmon;
 }
-
+.header__profile--modal {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s, opacity 0.3s ease;
+  /* position: relative; */
+  position: absolute;
+  top: 50px;
+  right: 10px;
+  width: 300px;
+  height: 100px;
+  flex-direction: column;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.header__profile--modal.show {
+  visibility: visible;
+  opacity: 1;
+}
+.header__profile--btn {
+  height: 50%;
+  font-size: 1em;
+  /* background-color: #8f8f8f; */
+  border: none;
+}
+.header__mode {
+  height: 50%;
+  font-size: 1em;
+  /* background-color: #8f8f8f; */
+  border: none;
+}
 @media screen and (max-width: 800px) {
   .header__title {
     display: none;

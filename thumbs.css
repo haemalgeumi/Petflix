@@ -5,6 +5,15 @@
   margin: 60px 0 0 200px;
   padding: 20px 0 0 10px;
 }
+
+body.dark-mode .nav__wrapper {
+  background-color: #333;
+  color: #fff;
+}
+body.dark-mode .thumbs__wrapper {
+  background-color: #333;
+  color: #fff;
+}
 .thumbs__item {
   width: 20%;
   margin: 0 0 15px 0;
