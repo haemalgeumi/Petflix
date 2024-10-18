@@ -3,8 +3,9 @@ import { YoutubeApi } from "./youtubeApi.js";
 import { thumbs } from "./thumbs.js";
 import { getVideoData } from "./viedoData.js";
 import { lightAndDarkMode } from "./ligthAndDarkMode.js";
-
-
+// import { router } from "./router.js";
+import { setupNavigation } from './navigation.js';
+import { navigate } from './navigate.js';
 
 const videos = getVideoData();
 console.log("getVideoData", videos);
@@ -15,3 +16,10 @@ document.querySelector(".header__dropdown").addEventListener("click", function()
 })
 thumbs();
 lightAndDarkMode();
+// navigate();
+// router();
+// 네비게이션 설정
+setupNavigation();
+
+// 초기 로드 시 기본 콘텐츠 로드
+navigate({ path: '/' });
