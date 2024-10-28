@@ -1,6 +1,6 @@
-import { YoutubeApi } from "./youtubeApi.js";
-import { fetchData } from "./fetchData.js";
-import { getVideoData } from "./viedoData.js";
+import { YoutubeApi } from "../api/youtubeApi.js";
+import { fetchData } from "../api/fetchData.js";
+import { getVideoData } from "../api/videoData.js";
 
 const video = getVideoData();
 
@@ -28,7 +28,7 @@ export function thumbs(){
                 <div class="thumbs__profile">
                   <img
                     class="thumbs__profile--img"
-                    src="./정면 사진.jpg"
+                   src="../assets/정면 사진.jpg"
                     alt="이미지 사진"
                   />
                 </div>

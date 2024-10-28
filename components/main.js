@@ -1,11 +1,10 @@
-import { fetchData } from "./fetchData.js";
-import { YoutubeApi } from "./youtubeApi.js";
+
 import { thumbs } from "./thumbs.js";
-import { getVideoData } from "./viedoData.js";
+import { getVideoData } from "../api/videoData.js";
 import { lightAndDarkMode } from "./ligthAndDarkMode.js";
 // import { router } from "./router.js";
-import { setupNavigation } from './navigation.js';
-import { navigate } from './navigate.js';
+import { setupNavigation } from '../routing/navigation.js';
+import { navigate } from '../routing/navigate.js';
 
 const videos = getVideoData();
 console.log("getVideoData", videos);
