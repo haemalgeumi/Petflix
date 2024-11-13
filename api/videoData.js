@@ -2,7 +2,7 @@
 import { fetchData } from "./fetchData.js";
 
 export async function getVideoData() {
-  const apiKey = "AIzaSyDUcZE9hEtEY9NSlZaa-BVGwD-fmXF5vek"; // 실제 API 키를 입력하세요
+  const apiKey = ""; // 실제 API 키를 입력하세요
   const url = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet&chart=mostPopular&hl=ko&maxResults=16&regionCode=KR&videoCategoryId=15&key=${apiKey}`;
 
   try {
